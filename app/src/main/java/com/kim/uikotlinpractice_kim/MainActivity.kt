@@ -8,7 +8,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+// 확인 버튼이 눌리면? 이벤트를 달아주자
 
-        contentEdt
+        okBtn.setOnClickListener {
+
+//            입력된 내용? contentEdt의 Text 값 조회(get) 변수에 저장해 두자
+            val inputContent = contentEdt.text.toString()
+
+//            저장해둔 입력값을 => 텍스트뷰 내용으로 반영(set)
+
+            resultTxt.text = inputContent
+        }
+
     }
 }
